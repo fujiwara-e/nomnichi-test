@@ -1,0 +1,7 @@
+.article-photo-portrait {
+  width: auto;
+  max-width: min(100%, 420px);
+  max-height: 75svh;
+  height: auto;
+  margin-inline: auto;
+}

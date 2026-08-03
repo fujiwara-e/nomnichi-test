@@ -1,0 +1,11 @@
+{{ $size := .Get "size" | default "800x" }}
+
+{{ with resources.Get (.Get "src") }} 
+  {{ $resized := .Resize $size }}
+  <img
+    src="{{ $resized.RelPermalink }}"
+    width="{{ $resized.Width }}"
+    height="{{ $resized.Height }}"
+    alt="{{ $.Get "alt" }}"
+  >
+{{ end }}
